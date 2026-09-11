@@ -45,9 +45,9 @@ OPENAI_MINI_MODEL = os.getenv("LAB_MINI_MODEL", "gpt-4o-mini")
 def call_openai(
         prompt: str,
         model: str = OPENAI_MODEL,
-        temperature: float = 1.0,
+        temperature: float = 2.0,
         top_p: float = 0.9,
-        max_tokens: int = 100,
+        max_tokens: int = 256,
 ) -> tuple[str, float]:
     """
     Gọi OpenAI Chat Completions API, trả về nội dung phản hồi + độ trễ.
